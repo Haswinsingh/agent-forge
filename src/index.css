@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #111111;
+    background-color: #ffffff;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Technical Grid Canvas Backgrounds */
+.tech-grid-bg {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(to right, rgba(17, 17, 17, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.tech-grid-dense {
+  background-image: 
+    linear-gradient(to right, rgba(17, 17, 17, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.035) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.tech-grid-major {
+  background-image: 
+    linear-gradient(to right, rgba(17, 17, 17, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.06) 1px, transparent 1px);
+  background-size: 128px 128px;
+}
+
+/* Technical Crosshair Pattern */
+.tech-crosshairs {
+  background-image: radial-gradient(circle, rgba(17, 17, 17, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Technical corner markers */
+.corner-bracket {
+  position: relative;
+}
+.corner-bracket::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #111111;
+  border-left: 2px solid #111111;
+  pointer-events: none;
+}
+.corner-bracket::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #111111;
+  border-right: 2px solid #111111;
+  pointer-events: none;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Glassmorphic Navbar Backdrop */
+.nav-blur-bg {
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Technical card border accent glow */
+.card-hover-tech {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-tech:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
+  border-color: #D1D5DB;
+}
+
+/* Animated Flow Lines */
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.animate-flow-dash {
+  stroke-dasharray: 6 6;
+  animation: flowDash 1.2s linear infinite;
+}
+
+@keyframes pulseHalo {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+}
+
+.pulse-halo {
+  animation: pulseHalo 3s ease-in-out infinite;
+}
