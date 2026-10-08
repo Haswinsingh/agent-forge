@@ -18,7 +18,7 @@ export const INSTITUTION = "Sri Sairam Engineering College";
  * Centralized configuration variable for the entire application.
  * All registration buttons reference this single source of truth.
  */
-export const REGISTRATION_FORM_URL = "YOUR_REGISTRATION_FORM_URL";
+export const REGISTRATION_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfeRJ-mBIj15TiPSLu1Y8nvlLyJjLdHWR7FMeUwvL0hsNCw5A/viewform?usp=dialog";
 
 /**
  * Configurable Event Logistics
